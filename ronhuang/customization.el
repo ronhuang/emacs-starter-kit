@@ -14,7 +14,11 @@
 ;; platform-specific stuff
 (when (eq system-type 'darwin)
   ;; use command key as alt key
-  (setq mac-command-modifier 'meta))
+  (setq mac-command-modifier 'meta)
+  (setq exec-path (cons "/opt/local/bin" exec-path)))
+
+;; flyspell-mode
+(setq-default ispell-program-name "aspell")
 
 ;; goto-last-change
 (autoload 'goto-last-change "goto-last-change"
