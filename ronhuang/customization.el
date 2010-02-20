@@ -21,6 +21,14 @@
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
 
+;; EMMS
+(require 'emms-setup)
+(emms-standard)
+(emms-default-players)
+
+;; column-number-mode
+(column-number-mode t)
+
 ;; goto-last-change
 (autoload 'goto-last-change "goto-last-change"
   "Set point to the position of the last change." t)
