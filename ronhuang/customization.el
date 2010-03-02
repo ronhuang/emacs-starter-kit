@@ -29,6 +29,11 @@
 ;; column-number-mode
 (column-number-mode t)
 
+;; term-mode
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq show-trailing-whitespace nil)))
+
 ;; goto-last-change
 (autoload 'goto-last-change "goto-last-change"
   "Set point to the position of the last change." t)
@@ -77,6 +82,13 @@
       (goto-char start)
       (while (< (point) end) (if (forward-word 1) (setq n (1+ n)))))
     (message "%3d %3d %3d" (count-lines start end) n (- end start))))
+
+;; toggle show trailing whitespace
+;; from http://www.emacswiki.org/emacs/DaveBenjamin
+(defun toggle-show-trailing-whitespace ()
+  "Toggles the highlighting of trailing whitespace."
+  (interactive)
+  (set-variable 'show-trailing-whitespace (not show-trailing-whitespace)))
 
 ;; keyboard shortcuts
 (global-set-key "\C-x\C-r" 'recentf-open-files)
