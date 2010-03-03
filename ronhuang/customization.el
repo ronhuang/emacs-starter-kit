@@ -38,6 +38,9 @@
   "Set point to the position of the last change." t)
 (global-set-key "\C-x\C-\\" 'goto-last-change)
 
+;; apropos-url
+(require 'apropos-url)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
