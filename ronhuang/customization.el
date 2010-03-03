@@ -70,17 +70,13 @@
   (while (search-forward "\n" nil t) (replace-match "\r\n")))
 
 ;; word count
-;; from http://www.emacswiki.org/emacs/WordCount
-(defun wc (&optional start end)
-  "Prints number of lines, words and characters in region or whole buffer."
+;; combine of http://www.emacswiki.org/emacs/WordCount and
+;; http://www.neverfriday.com/sweetfriday/2008/06/emacs-tip-word-counting-with-a.html
+(defun wc ()
   (interactive)
-  (let ((n 0)
-        (start (if mark-active (region-beginning) (point-min)))
+  (let ((start (if mark-active (region-beginning) (point-min)))
         (end (if mark-active (region-end) (point-max))))
-    (save-excursion
-      (goto-char start)
-      (while (< (point) end) (if (forward-word 1) (setq n (1+ n)))))
-    (message "%3d %3d %3d" (count-lines start end) n (- end start))))
+    (message "Word count: %s" (how-many "\\w+" start end))))
 
 ;; toggle show trailing whitespace
 ;; from http://www.emacswiki.org/emacs/DaveBenjamin
