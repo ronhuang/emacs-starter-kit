@@ -1,6 +1,5 @@
 ;; color-theme
-(load-file "~/.emacs.d/ronhuang/zen-and-art.el")
-(color-theme-zen-and-art)
+(color-theme-wombat)
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
