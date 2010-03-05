@@ -41,6 +41,13 @@
 ;; apropos-url
 (require 'apropos-url)
 
+;; twittering-mode
+(require 'twittering-mode)
+(setq twittering-username "ronhuang")
+ (add-hook 'twittering-mode-hook
+           (lambda ()
+             (setq show-trailing-whitespace nil)))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
