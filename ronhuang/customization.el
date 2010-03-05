@@ -48,6 +48,10 @@
            (lambda ()
              (setq show-trailing-whitespace nil)))
 
+;; lua-mode
+(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
