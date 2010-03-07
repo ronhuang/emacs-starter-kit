@@ -16,6 +16,10 @@
   ;; use command key as alt key
   (setq mac-command-modifier 'meta)
   (setq exec-path (cons "/opt/local/bin" exec-path)))
+(when (eq system-type 'gnu/linux)
+  ;; use chrome as default browser
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "google-chrome"))
 
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
