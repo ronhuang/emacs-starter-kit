@@ -11,11 +11,16 @@
 ;; auto-fill
 (setq fill-column 78)
 
+;; prevent emacs from breaking hard link
+(setq backup-by-copying-when-linked t)
+
 ;; platform-specific stuff
 (when (eq system-type 'darwin)
   ;; use command key as alt key
   (setq mac-command-modifier 'meta)
-  (setq exec-path (cons "/opt/local/bin" exec-path)))
+  (setq exec-path (cons "/usr/local/bin" exec-path))
+  (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+  )
 
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
