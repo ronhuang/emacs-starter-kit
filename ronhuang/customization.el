@@ -48,13 +48,20 @@
 ;; twittering-mode
 (require 'twittering-mode)
 (setq twittering-username "ronhuang")
- (add-hook 'twittering-mode-hook
-           (lambda ()
-             (setq show-trailing-whitespace nil)))
+(add-hook 'twittering-mode-hook
+          (lambda ()
+            (setq show-trailing-whitespace nil)))
 
 ;; lua-mode
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+
+;; cmake
+(require 'cmake-mode)
+(setq auto-mode-alist
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode))
+              auto-mode-alist))
 
 ;; reloads the current file
 (defun reload-file ()
