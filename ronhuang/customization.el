@@ -67,6 +67,14 @@
                 ("\\.cmake\\'" . cmake-mode))
               auto-mode-alist))
 
+;; shell-pop
+(require 'shell-pop)
+(shell-pop-set-internal-mode "ansi-term")
+(shell-pop-set-internal-mode-shell "/bin/bash")
+(shell-pop-set-window-height 40)
+(shell-pop-set-window-position "bottom")
+(global-set-key [f8] 'shell-pop)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
