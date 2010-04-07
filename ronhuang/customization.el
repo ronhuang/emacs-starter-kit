@@ -126,6 +126,8 @@
 (global-set-key "\C-x\C-r" 'recentf-open-files)
 (global-set-key (kbd "M-<return>") 'complete-tag)
 (global-set-key (kbd "C-x t") 'ansi-term)
+(when (eq system-type 'darwin)
+  (global-set-key [f11] 'ns-toggle-fullscreen))
 
 ;; daemon
 (server-start)
