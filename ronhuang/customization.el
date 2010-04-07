@@ -19,8 +19,11 @@
   ;; use command key as alt key
   (setq mac-command-modifier 'meta)
   (setq exec-path (cons "/usr/local/bin" exec-path))
-  (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
-  )
+  (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
+(when (eq system-type 'gnu/linux)
+  ;; use chrome as default browser
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "google-chrome"))
 
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
@@ -49,13 +52,20 @@
 ;; twittering-mode
 (require 'twittering-mode)
 (setq twittering-username "ronhuang")
- (add-hook 'twittering-mode-hook
-           (lambda ()
-             (setq show-trailing-whitespace nil)))
+(add-hook 'twittering-mode-hook
+          (lambda ()
+            (setq show-trailing-whitespace nil)))
 
 ;; lua-mode
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+
+;; cmake
+(require 'cmake-mode)
+(setq auto-mode-alist
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode))
+              auto-mode-alist))
 
 ;; reloads the current file
 (defun reload-file ()
