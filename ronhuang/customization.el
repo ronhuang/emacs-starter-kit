@@ -75,6 +75,9 @@
 (shell-pop-set-window-position "bottom")
 (global-set-key [f8] 'shell-pop)
 
+;; rcirc
+(eval-after-load 'rcirc '(require 'rcirc-notify))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
