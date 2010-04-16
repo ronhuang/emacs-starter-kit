@@ -75,6 +75,10 @@
 (shell-pop-set-window-position "bottom")
 (global-set-key [f8] 'shell-pop)
 
+;; w3m
+(require 'w3m-load)
+(setq w3m-use-cookies t)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
