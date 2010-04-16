@@ -75,6 +75,9 @@
 (shell-pop-set-window-position "bottom")
 (global-set-key [f8] 'shell-pop)
 
+;; rcirc
+(eval-after-load 'rcirc '(require 'rcirc-notify))
+
 ;; w3m
 (require 'w3m-load)
 (setq w3m-use-cookies t)
