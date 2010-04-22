@@ -1,6 +1,6 @@
 ;; load path
 (when (eq system-type 'gnu/linux)
-  (setq load-path (cons "~/share/emacs/site-lisp" load-path)))
+  (setq load-path (cons "~/share/emacs/site-lisp/w3m" load-path)))
 
 ;; color-theme
 (color-theme-wombat)
