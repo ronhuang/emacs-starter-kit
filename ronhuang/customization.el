@@ -86,6 +86,9 @@
 (require 'w3m-load)
 (setq w3m-use-cookies t)
 
+;; desktop save
+(desktop-save-mode 1)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
