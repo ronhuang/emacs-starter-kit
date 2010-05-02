@@ -136,12 +136,19 @@
   (interactive)
   (set-variable 'show-trailing-whitespace (not show-trailing-whitespace)))
 
+;; Full screen on Linux
+(defun switch-full-screen ()
+  (interactive)
+  (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
+
 ;; keyboard shortcuts
 (global-set-key "\C-x\C-r" 'recentf-open-files)
 (global-set-key (kbd "M-<return>") 'complete-tag)
 (global-set-key (kbd "C-x t") 'ansi-term)
 (when (eq system-type 'darwin)
   (global-set-key [f11] 'ns-toggle-fullscreen))
+(when (eq system-type 'gnu/linux)
+  (global-set-key [f11] 'switch-full-screen))
 
 ;; daemon
 (server-start)
