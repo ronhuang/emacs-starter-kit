@@ -92,6 +92,9 @@
 ;; winner
 (winner-mode 1)
 
+;; iresize
+(require 'iresize)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
