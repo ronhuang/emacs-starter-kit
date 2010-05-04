@@ -89,6 +89,9 @@
 ;; desktop save
 (desktop-save-mode 1)
 
+;; winner
+(winner-mode 1)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
