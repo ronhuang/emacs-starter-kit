@@ -22,6 +22,8 @@
 (when (eq system-type 'darwin)
   ;; use command key as alt key
   (setq mac-command-modifier 'meta)
+  (setq exec-path (cons "/usr/texbin" exec-path))
+  (setenv "PATH" (concat "/usr/texbin:" (getenv "PATH")))
   (setq exec-path (cons "/usr/local/bin" exec-path))
   (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
 (when (eq system-type 'gnu/linux)
