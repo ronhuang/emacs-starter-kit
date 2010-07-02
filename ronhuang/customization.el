@@ -73,9 +73,17 @@
                 ("\\.cmake\\'" . cmake-mode))
               auto-mode-alist))
 
+;; multi-term
+(require 'multi-term)
+(setq multi-term-program "/bin/bash")
+(global-set-key (kbd "C-c t") 'multi-term-next)
+(global-set-key (kbd "C-c T") 'multi-term) ;; create a new one
+
 ;; shell-pop
 (require 'shell-pop)
-(shell-pop-set-internal-mode "ansi-term")
+(add-to-list 'shell-pop-internal-mode-list
+             '("multi-term" "*terminal<1>*" '(lambda () (multi-term))))
+(shell-pop-set-internal-mode "multi-term")
 (shell-pop-set-internal-mode-shell "/bin/bash")
 (shell-pop-set-window-height 40)
 (shell-pop-set-window-position "bottom")
