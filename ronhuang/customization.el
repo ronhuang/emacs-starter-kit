@@ -3,7 +3,7 @@
   (setq load-path (cons "~/share/emacs/site-lisp/w3m" load-path)))
 
 ;; color-theme
-(color-theme-wombat)
+(color-theme-tangotango)
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
