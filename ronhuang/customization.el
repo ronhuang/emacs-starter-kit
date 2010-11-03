@@ -126,6 +126,13 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; Edit With Emacs - Google Chrome Extension
+(if (locate-library "edit-server")
+    (progn
+      (require 'edit-server)
+      (setq edit-server-new-frame nil)
+      (edit-server-start)))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
