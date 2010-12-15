@@ -1,7 +1,3 @@
-;; load path
-(when (eq system-type 'gnu/linux)
-  (setq load-path (cons "~/share/emacs/site-lisp/w3m" load-path)))
-
 ;; color-theme
 (color-theme-tangotango)
 
@@ -33,11 +29,6 @@
 
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
-
-;; EMMS
-(require 'emms-setup)
-(emms-standard)
-(emms-default-players)
 
 ;; column-number-mode
 (column-number-mode t)
@@ -101,10 +92,6 @@
 ;; rcirc
 (eval-after-load 'rcirc '(require 'rcirc-notify))
 
-;; w3m
-(require 'w3m-load)
-(setq w3m-use-cookies t)
-
 ;; desktop save
 (desktop-save-mode 1)
 
@@ -125,13 +112,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-;; Edit With Emacs - Google Chrome Extension
-(if (locate-library "edit-server")
-    (progn
-      (require 'edit-server)
-      (setq edit-server-new-frame nil)
-      (edit-server-start)))
 
 ;; reloads the current file
 (defun reload-file ()
