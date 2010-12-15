@@ -30,6 +30,9 @@
   ;; use chrome as default browser
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "google-chrome"))
+(when (eq system-type 'windows-nt)
+  (set-default-font
+   "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1"))
 
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
