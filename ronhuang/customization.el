@@ -1,3 +1,7 @@
+;; ELPA, may need to invoke starter-kit-elpa-install.
+(add-to-list 'starter-kit-packages 'iresize t)
+(add-to-list 'starter-kit-packages 'smex t)
+
 ;; color-theme
 (color-theme-tangotango)
 
