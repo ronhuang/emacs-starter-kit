@@ -64,10 +64,6 @@
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
-;; nxhtml-mode
-(load "~/.emacs.d/ronhuang/nxhtml/autostart.el")
-(setq mumamo-chunk-coloring 4)
-
 ;; php-mode
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
@@ -122,6 +118,10 @@
 
 ;; obj-j
 (require 'objj-mode)
+
+;; nxhtml-mode
+(load "~/.emacs.d/ronhuang/nxhtml/autostart.el")
+(setq mumamo-chunk-coloring 4)
 
 ;; reloads the current file
 (defun reload-file ()
