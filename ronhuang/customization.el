@@ -3,7 +3,7 @@
 (add-to-list 'starter-kit-packages 'smex t)
 
 ;; color-theme
-(color-theme-tangotango)
+(color-theme-wombat)
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
