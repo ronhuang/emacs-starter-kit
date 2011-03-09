@@ -123,6 +123,11 @@
 (load "~/.emacs.d/ronhuang/nxhtml/autostart.el")
 (setq mumamo-chunk-coloring 4)
 
+;; javascript-mode
+(add-hook 'js-mode-hook
+          (lambda ()
+            (setq js-indent-level 2)))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
