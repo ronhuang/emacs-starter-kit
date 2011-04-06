@@ -128,6 +128,11 @@
           (lambda ()
             (setq js-indent-level 2)))
 
+;; erc
+(setq erc-autojoin-channels-alist
+      '(("freenode.net" "#emacs" "#node.js" "#git" "#chromium" "#tossug" "#ubuntu-tw")
+        ("debian.org" "#dot")))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
