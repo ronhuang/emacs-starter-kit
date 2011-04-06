@@ -19,5 +19,6 @@ ronhuang/nxhtml/etc/schema/xhtml-loader.rnc~
 session*
 tramp
 \#*
+history
 /.emacs.desktop
 /.emacs.desktop.lock
