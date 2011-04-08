@@ -133,6 +133,11 @@
       '(("freenode.net" "#emacs" "#node.js" "#git" "#chromium" "#tossug" "#ubuntu-tw")
         ("debian.org" "#dot")))
 
+;; css-mode
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq css-indent-level 2)))
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
