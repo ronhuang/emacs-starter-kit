@@ -196,7 +196,7 @@ Report a bug in nXhtml.
 
 ;;;### (autoloads (nxhtml-overview nxhtml-menu-mode nxhtml-browse-region
 ;;;;;;  nxhtml-browse-file nxhtml-edit-with-gimp mumamo-switch-to-other-html)
-;;;;;;  "../nxhtml/nxhtml-menu" "nxhtml/nxhtml-menu.el" (19738 15911))
+;;;;;;  "../nxhtml/nxhtml-menu" "nxhtml/nxhtml-menu.el" (19820 61971))
 ;;; Generated autoloads from nxhtml/nxhtml-menu.el
 (web-autoload-require 'nxhtml-menu 'lp '(nxhtml-download-root-url nil) "nxhtml/nxhtml-menu" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -606,7 +606,7 @@ For django comment blocks.
 ;;;***
 
 ;;;### (autoloads (flymake-global-mode) "../related/flymake-files"
-;;;;;;  "related/flymake-files.el" (19738 19613))
+;;;;;;  "related/flymake-files.el" (19738 19612))
 ;;; Generated autoloads from related/flymake-files.el
 (web-autoload-require 'flymake-files 'lp '(nxhtml-download-root-url nil) "related/flymake-files" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -794,7 +794,7 @@ update Firefox when you save the CSS file.
 ;;;***
 
 ;;;### (autoloads (php-mode php-file-patterns php) "../related/php-mode"
-;;;;;;  "related/php-mode.el" (19505 7842))
+;;;;;;  "related/php-mode.el" (19759 28338))
 ;;; Generated autoloads from related/php-mode.el
 (web-autoload-require 'php-mode 'lp '(nxhtml-download-root-url nil) "related/php-mode" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -816,7 +816,7 @@ Major mode for editing PHP code.
 ;;;***
 
 ;;;### (autoloads (smarty-mode smarty) "../related/smarty-mode" "related/smarty-mode.el"
-;;;;;;  (19725 16629))
+;;;;;;  (19725 16628))
 ;;; Generated autoloads from related/smarty-mode.el
 (web-autoload-require 'smarty-mode 'lp '(nxhtml-download-root-url nil) "related/smarty-mode" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -1316,7 +1316,7 @@ Major mode for editing Template Toolkit files.
 ;;;***
 
 ;;;### (autoloads (visual-basic-mode) "../related/visual-basic-mode"
-;;;;;;  "related/visual-basic-mode.el" (19647 7623))
+;;;;;;  "related/visual-basic-mode.el" (19647 7622))
 ;;; Generated autoloads from related/visual-basic-mode.el
 (web-autoload-require 'visual-basic-mode 'lp '(nxhtml-download-root-url nil) "related/visual-basic-mode" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -1661,16 +1661,30 @@ See `as-external-alist' for more information.
 
 ;;;***
 
-;;;### (autoloads (bibhlp-search-ref-at-point-in-elin bibhlp-goto-citeulike
-;;;;;;  bibhlp) "bibhlp" "util/bibhlp.el" (19746 8885))
+;;;### (autoloads (bibhlp-search-ref-at-point-in-libhub bibhlp-goto-citeulike
+;;;;;;  bibhlp) "bibhlp" "util/bibhlp.el" (19828 54511))
 ;;; Generated autoloads from util/bibhlp.el
 (web-autoload-require 'bibhlp 'lp '(nxhtml-download-root-url nil) "util/bibhlp" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
 
 (nxhtml-autoload 'bibhlp `(lp '(nxhtml-download-root-url nil) "util/bibhlp" nxhtml-install-dir) "\
-Big Question aka simple entry point.
-Will give you a list of what you can do with the bibl ref or url
-at point.
+Big Question for handling of bibliographic related things.
+Will give you a choice list with what you can do with the
+bibliograchic referencce or the url at point.
+
+For a recognized bibliographic reference at point you can:
+  - look it up on the web
+  - can convert it to a different format
+
+  The currently recognized reference formats are End Note
+  (.enw), Reference Manager (.ris) and APA style.
+
+For an URL at point you can:
+  - of course show it in a browser
+  - search for it in org mode buffers and files
+  - There is also a chance that you can get bliograchic data on
+    the page url, but this does not work well.
+  - add it to CitULike
 
 \(fn)" t nil)
 
@@ -1688,9 +1702,10 @@ and it looks like data can be shared/exported to Zotero later.
 
 \(fn ARTICLE-URL)" t nil)
 
-(nxhtml-autoload 'bibhlp-search-ref-at-point-in-elin `(lp '(nxhtml-download-root-url nil) "util/bibhlp" nxhtml-install-dir) "\
-Try to find bibliographic at point in ELIN@Lund.
-ELIN@Lund is Lunds University Library, URL `http://www.lub.lu.se/en.html'.
+(nxhtml-autoload 'bibhlp-search-ref-at-point-in-libhub `(lp '(nxhtml-download-root-url nil) "util/bibhlp" nxhtml-install-dir) "\
+Try to find bibliographic at point in LibHub.
+LibHub is a library gateway used by some universities to let
+students and staff access scientific journals etc.
 
 \(fn)" t nil)
 
@@ -1966,7 +1981,7 @@ See `css-palette-mode' for more information on Css-Palette mode.
 ;;;***
 
 ;;;### (autoloads (cusnu-export-my-skin-options customize-for-new-user)
-;;;;;;  "cus-new-user" "util/cus-new-user.el" (19735 32565))
+;;;;;;  "cus-new-user" "util/cus-new-user.el" (19735 32564))
 ;;; Generated autoloads from util/cus-new-user.el
 (web-autoload-require 'cus-new-user 'lp '(nxhtml-download-root-url nil) "util/cus-new-user" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -2398,7 +2413,7 @@ Not documented
 ;;;***
 
 ;;;### (autoloads (idxgds-search-adv idxgds-search idxgds-query-url-p)
-;;;;;;  "idxgds" "util/idxgds.el" (19747 6157))
+;;;;;;  "idxgds" "util/idxgds.el" (19776 40126))
 ;;; Generated autoloads from util/idxgds.el
 (web-autoload-require 'idxgds 'lp '(nxhtml-download-root-url nil) "util/idxgds" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -2420,8 +2435,8 @@ Not documented
 
 ;;;***
 
-;;;### (autoloads (idxsearch) "idxsearch" "util/idxsearch.el" (19747
-;;;;;;  44266))
+;;;### (autoloads (idxsearch) "idxsearch" "util/idxsearch.el" (19774
+;;;;;;  13248))
 ;;; Generated autoloads from util/idxsearch.el
 (web-autoload-require 'idxsearch 'lp '(nxhtml-download-root-url nil) "util/idxsearch" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -2458,7 +2473,7 @@ different root locations at once.
 ;;;***
 
 ;;;### (autoloads (idxwds-search) "idxsql" "util/idxsql.el" (19747
-;;;;;;  46541))
+;;;;;;  46540))
 ;;; Generated autoloads from util/idxsql.el
 (web-autoload-require 'idxsql 'lp '(nxhtml-download-root-url nil) "util/idxsql" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -2688,7 +2703,7 @@ See `mlinks-mode' for more information on Mlinks mode.
 ;;;;;;  mumamo-list-defined-multi-major-modes mumamo-mark-for-refontification
 ;;;;;;  mumamo-hi-lock-faces mumamo mumamo-add-to-defined-multi-major-modes
 ;;;;;;  define-mumamo-multi-major-mode) "mumamo" "util/mumamo.el"
-;;;;;;  (19734 3867))
+;;;;;;  (19812 27313))
 ;;; Generated autoloads from util/mumamo.el
 (web-autoload-require 'mumamo 'lp '(nxhtml-download-root-url nil) "util/mumamo" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -2844,7 +2859,7 @@ Return t if VALUE is a multi major mode function.
 ;;;***
 
 ;;;### (autoloads (mumamo-noweb2 mumamo-define-html-file-wide-keys)
-;;;;;;  "mumamo-chunks" "util/mumamo-chunks.el" (19754 28135))
+;;;;;;  "mumamo-chunks" "util/mumamo-chunks.el" (19755 314))
 ;;; Generated autoloads from util/mumamo-chunks.el
 (web-autoload-require 'mumamo-chunks 'lp '(nxhtml-download-root-url nil) "util/mumamo-chunks" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -3159,7 +3174,7 @@ Color up digits three by three.
 ;;;***
 
 ;;;### (autoloads (orgfl-find-links-in-org-files orgfl-find-links-in-org-buffers)
-;;;;;;  "org-find-links" "util/org-find-links.el" (19730 58625))
+;;;;;;  "org-find-links" "util/org-find-links.el" (19730 58624))
 ;;; Generated autoloads from util/org-find-links.el
 (web-autoload-require 'org-find-links 'lp '(nxhtml-download-root-url nil) "util/org-find-links" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -3196,12 +3211,13 @@ Search subdirs if RECURSE is 'yes, don't if it is 'no.
 ;;;;;;  narrow-to-comment buffer-narrowed-p describe-command ourcomments-ediff-files
 ;;;;;;  find-emacs-other-file ediff-emacs-other-file ourcomments-insert-date-and-time
 ;;;;;;  describe-timers paste-as-new-buffer ourcomments-is-obsolete
-;;;;;;  ourcomments-copy+paste-set-point better-fringes-mode describe-key-and-map-briefly
-;;;;;;  ourcomments-move-end-of-line ourcomments-move-beginning-of-line
-;;;;;;  major-modep major-or-multi-majorp ourcomments-mark-whole-buffer-or-field
-;;;;;;  fill-dwim unfill-individual-paragraphs unfill-region unfill-paragraph
-;;;;;;  define-toggle-old define-toggle popup-menu-at-point ourcomments-indirect-fun)
-;;;;;;  "ourcomments-util" "util/ourcomments-util.el" (19742 45083))
+;;;;;;  ourcomments-tr ourcomments-copy+paste-set-point better-fringes-mode
+;;;;;;  describe-key-and-map-briefly ourcomments-move-end-of-line
+;;;;;;  ourcomments-move-beginning-of-line major-modep major-or-multi-majorp
+;;;;;;  ourcomments-mark-whole-buffer-or-field fill-dwim unfill-individual-paragraphs
+;;;;;;  unfill-region unfill-paragraph define-toggle-old define-toggle
+;;;;;;  popup-menu-at-point ourcomments-indirect-fun) "ourcomments-util"
+;;;;;;  "util/ourcomments-util.el" (19828 54312))
 ;;; Generated autoloads from util/ourcomments-util.el
 (web-autoload-require 'ourcomments-util 'lp '(nxhtml-download-root-url nil) "util/ourcomments-util" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -3350,6 +3366,15 @@ should select a piece of text to copy and then call the command
 `ourcomments-copy+paste'.
 
 \(fn)" t nil)
+
+(nxhtml-autoload 'ourcomments-tr `(lp '(nxhtml-download-root-url nil) "util/ourcomments-util" nxhtml-install-dir) "\
+Replace all characters in STR listed in FROM
+with characters listed in TO. If1 FROM is longer
+than TO, then the excess characters are deleted.
+
+\(tr \"abcdefg\" \"abcd\" \"ABC\") => \"ABCefg\"
+
+\(fn STR FROM TO)" nil nil)
 
 (nxhtml-autoload 'ourcomments-is-obsolete `(lp '(nxhtml-download-root-url nil) "util/ourcomments-util" nxhtml-install-dir) "\
 Return non-nil if SYMBOL is obsolete in current Emacs.
@@ -3681,7 +3706,7 @@ an export there to html/javascript format.
 ;;;***
 
 ;;;### (autoloads (pause-start-in-new-emacs pause-mode pause) "pause"
-;;;;;;  "util/pause.el" (19725 18265))
+;;;;;;  "util/pause.el" (19765 54962))
 ;;; Generated autoloads from util/pause.el
 (web-autoload-require 'pause 'lp '(nxhtml-download-root-url nil) "util/pause" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -3921,7 +3946,7 @@ Display a form for search and replace.
 ;;;***
 
 ;;;### (autoloads (search-net search-net-dwim) "search-net" "util/search-net.el"
-;;;;;;  (19457 53996))
+;;;;;;  (19796 15328))
 ;;; Generated autoloads from util/search-net.el
 (web-autoload-require 'search-net 'lp '(nxhtml-download-root-url nil) "util/search-net" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -4188,7 +4213,7 @@ Display vertical line mode as globally.
 ;;;***
 
 ;;;### (autoloads (web-vcs-linkpatt-mode) "web-vcs-linkpatt" "util/web-vcs-linkpatt.el"
-;;;;;;  (19744 12851))
+;;;;;;  (19796 15422))
 ;;; Generated autoloads from util/web-vcs-linkpatt.el
 (web-autoload-require 'web-vcs-linkpatt 'lp '(nxhtml-download-root-url nil) "util/web-vcs-linkpatt" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -4211,7 +4236,7 @@ Minor mode helping finding link patt for web-vcs.
 
 ;;;### (autoloads (winsav-switch-config winsav-save-full-config winsav-save-mode
 ;;;;;;  winsav winsav-put-window-tree) "winsav" "util/winsav.el"
-;;;;;;  (19571 7230))
+;;;;;;  (19819 63836))
 ;;; Generated autoloads from util/winsav.el
 (web-autoload-require 'winsav 'lp '(nxhtml-download-root-url nil) "util/winsav" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -4299,8 +4324,8 @@ See also option `winsav-save-mode' and command
 ;;;### (autoloads (winsav-rotate winsize-set-mode-line-colors winsize-save-window-configuration
 ;;;;;;  winsize-balance-siblings winsize-fit-frame-width winsize-fitw-and-maxh-frame
 ;;;;;;  winsize-max-frame-height winsize-fit-windows-to-desired-widths
-;;;;;;  winsize-fit-window-to-desired-width resize-windows) "winsize"
-;;;;;;  "util/winsize.el" (19601 27026))
+;;;;;;  winsize-fit-window-to-buffer winsize-fit-window-to-desired-width
+;;;;;;  resize-windows) "winsize" "util/winsize.el" (19821 38943))
 ;;; Generated autoloads from util/winsize.el
 (web-autoload-require 'winsize 'lp '(nxhtml-download-root-url nil) "util/winsize" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
@@ -4508,6 +4533,18 @@ DESIRED-WIDTH.
 
 \(fn WINDOW ONLY-TRAILING DESIRED-WIDTH)" t nil)
 
+(nxhtml-autoload 'winsize-fit-window-to-buffer `(lp '(nxhtml-download-root-url nil) "util/winsize" nxhtml-install-dir) "\
+A more complete `fit-window-to-buffer'. Fix-me: not ready, bug# 7822.
+Find through an iterative search minimal height to display whole
+buffer (narrowed part if narrowed) and set window height to that
+height.  Or, if that can not be done then set the height to the
+best possible height for fit.
+
+Try first to adjust window below and if that is not enough window
+above.
+
+\(fn &optional WINDOW MAX-HEIGHT MIN-HEIGHT)" nil nil)
+
 (nxhtml-autoload 'winsize-fit-windows-to-desired-widths `(lp '(nxhtml-download-root-url nil) "util/winsize" nxhtml-install-dir) "\
 Fit window width to desired width for buffers.
 Set widths by calling `winsize-fit-window-to-desired-width'.
@@ -4685,16 +4722,15 @@ accept it or skip it.
 ;;;;;;  "util/custsets.el" "util/ecb-batch-compile.el" "util/fupd.el"
 ;;;;;;  "util/idn.el" "util/mumamo-trace.el" "util/new-key-seq-widget.el"
 ;;;;;;  "util/org-odt.el" "util/org-panel.el" "util/ourcomments-widgets.el"
-;;;;;;  "util/powershell-mode.el" "util/rxi.el" "util/temp-declare-fun-test.el"
-;;;;;;  "util/temp-declare-fun.el" "util/temp.el" "util/tipframe.el"
-;;;;;;  "util/win-alg.el" "web-autoload.el") (19754 29878 953000))
+;;;;;;  "util/powershell-mode.el" "util/rxi.el" "util/tipframe.el"
+;;;;;;  "util/win-alg.el" "web-autoload.el") (19828 54671 937000))
 
 ;;;***
 
 ;;;### (autoloads (nxhtml-byte-recompile-file nxhtml-byte-compile-file
 ;;;;;;  nxhtml-get-missing-files nxhtml-update-existing-files nxhtml-setup-download-all
 ;;;;;;  nxhtml-setup-auto-download nxhtml-setup-install) "../nxhtml-web-vcs"
-;;;;;;  "nxhtml-web-vcs.el" (19734 7809))
+;;;;;;  "nxhtml-web-vcs.el" (19734 7808))
 ;;; Generated autoloads from nxhtml-web-vcs.el
 (web-autoload-require 'nxhtml-web-vcs 'lp '(nxhtml-download-root-url nil) "nxhtml-web-vcs" nxhtml-install-dir 'nxhtml-byte-compile-file)
 
