@@ -1,6 +1,12 @@
 ;; ELPA, may need to invoke starter-kit-elpa-install.
 (add-to-list 'starter-kit-packages 'iresize t)
 (add-to-list 'starter-kit-packages 'smex t)
+(add-to-list 'starter-kit-packages 'color-theme t)
+(add-to-list 'starter-kit-packages 'markdown-mode t)
+(add-to-list 'starter-kit-packages 'zenburn t)
+(add-to-list 'starter-kit-packages 'ruby-electric t)
+(add-to-list 'starter-kit-packages 'htmlize t)
+(add-to-list 'starter-kit-packages 'erc-highlight-nicknames t)
 
 ;; color-theme
 (color-theme-wombat)
@@ -122,11 +128,6 @@
 ;; nxhtml-mode
 (load "~/.emacs.d/ronhuang/nxhtml/autostart.el")
 (setq mumamo-chunk-coloring 4)
-
-;; javascript-mode
-(add-hook 'js-mode-hook
-          (lambda ()
-            (setq js-indent-level 2)))
 
 ;; erc
 (setq erc-autojoin-channels-alist
