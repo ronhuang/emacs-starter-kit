@@ -139,6 +139,16 @@
           (lambda ()
             (setq css-indent-level 2)))
 
+;; aHg: An Emacs front-end for the Mercurial SCM
+(require 'ahg)
+(add-hook 'ahg-short-log-mode-hook
+          (lambda ()
+            (setq show-trailing-whitespace nil)))
+(add-hook 'ahg-diff-mode-hook
+          (lambda ()
+            (setq show-trailing-whitespace nil)))
+
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
