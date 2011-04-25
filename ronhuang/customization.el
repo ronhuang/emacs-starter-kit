@@ -9,7 +9,7 @@
 (add-to-list 'starter-kit-packages 'erc-highlight-nicknames t)
 
 ;; color-theme
-(color-theme-solarized-dark)
+(color-theme-solarized-light)
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
