@@ -13,23 +13,6 @@
 (eval-when-compile
   (require 'color-theme))
 
-;; `((normal (:foreground ,base0 :background ,base03))
-;;   (comment (:foreground ,base01 :italic t))
-;;   ((constant string character number boolean float) (:foreground ,cyan))
-;;   ((identifier function directory) (:foreground ,blue))
-;;   ((statement conditional repeat label operator keyword exception)
-;;    (:foreground ,green))
-;;   ((pre-proc include define macro pre-condit) (:foreground orange))
-;;   ((type storage-class structure typedef (:foreground yellow)))
-;;   ((special special-char tag delimiter special-comment debug)
-;;    (:foreground ,red))
-;;   (underlined (:foreground ,violet))
-;;   (error (:foreground ,red :bold t))
-;;   (todo (:foreground ,magenta :bold t))
-;;   (special-key (:foreground ,base02))
-;;   (non-text (:foreground ,base02 :bold t))
-;;   ())
-
 (defun color-theme-solarized (mode)
   "Color theme by Ethan Schoonover, created 2011-03-24.
 Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
@@ -78,7 +61,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (mode-line-inactive
         ((t (:foreground ,base0  :background ,base02
                          :box (:line-width 1 :color ,base02)))))
-       (region ((t (:background ,base01))))
+       (region ((t (:background ,base02))))
        (secondary-selection ((t (:background ,base02))))
        (trailing-whitespace ((t (:foreground ,red :inverse-video t))))
        (vertical-border ((t (:foreground ,base0))))
@@ -135,5 +118,14 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
 (defun color-theme-solarized-light ()
   (interactive)
   (color-theme-solarized 'light))
+
+(add-to-list 'color-themes
+             '(color-theme-solarized-light
+               "Solarized Light"
+               "Ethan Schoonover & Greg Pfeil <greg@technomadic.org>"))
+(add-to-list 'color-themes
+             '(color-theme-solarized-dark
+               "Solarized Dark"
+               "Ethan Schoonover & Greg Pfeil <greg@technomadic.org>"))
 
 (provide 'color-theme-solarized)
