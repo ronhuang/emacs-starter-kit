@@ -40,6 +40,11 @@
   (set-default-font
    "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1"))
 
+;; c-mode
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             (c-set-style "stroustrup")))
+
 ;; flyspell-mode
 (setq-default ispell-program-name "aspell")
 
