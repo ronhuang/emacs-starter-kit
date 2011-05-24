@@ -9,7 +9,7 @@
 (add-to-list 'starter-kit-packages 'erc-highlight-nicknames t)
 
 ;; color-theme
-(color-theme-solarized-light)
+(color-theme-solarized-dark)
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
@@ -35,9 +35,11 @@
 (when (eq system-type 'gnu/linux)
   ;; use chrome as default browser
   (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "google-chrome"))
+        browse-url-generic-program "google-chrome")
+  (set-frame-font
+   "-microsoft-Consolas-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"))
 (when (eq system-type 'windows-nt)
-  (set-default-font
+  (set-frame-font
    "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1"))
 
 ;; c-mode
