@@ -37,7 +37,7 @@
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "google-chrome")
   (set-frame-font
-   "-microsoft-Consolas-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"))
+   "-microsoft-Consolas-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1"))
 (when (eq system-type 'windows-nt)
   (set-frame-font
    "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1"))
