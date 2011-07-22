@@ -157,6 +157,8 @@
           (lambda ()
             (setq show-trailing-whitespace nil)))
 
+;; obj-c mode
+(add-to-list 'auto-mode-alist '("\\.mm$" . objc-mode))
 
 ;; reloads the current file
 (defun reload-file ()
