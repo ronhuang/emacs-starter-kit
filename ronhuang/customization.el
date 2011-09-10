@@ -160,6 +160,9 @@
 ;; obj-c mode
 (add-to-list 'auto-mode-alist '("\\.mm$" . objc-mode))
 
+;; go mode
+(require 'go-mode-load)
+
 ;; reloads the current file
 (defun reload-file ()
   "Reloads the current file."
